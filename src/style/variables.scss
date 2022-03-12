@@ -1,1 +1,28 @@
-$color-primary: #006afe;
+// 常用颜色
+$color-blue: #006afe;
+$color-red: #f55545;
+$color-yellow: #faad14;
+
+$color-background: #f7f8fa;
+$colo-white: #ffff;
+$color-font: #1f1f1f;
+
+// 字体大小
+$font-size-small: 12px;
+$font-size-normal: 14px;
+$font-size-big: 16px;
+
+// 单行省略
+@mixin LineEllipsis($width: 100%) {
+  max-width: $width;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 水平垂直居中
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
