@@ -4,7 +4,7 @@ import NavHeader from '@/pages/product'
 const App: React.FC = () => {
   return (
     // <div>App</div>
-    <NavHeader/>
+    <NavHeader />
   )
 }
 
