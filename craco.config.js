@@ -10,7 +10,10 @@ module.exports = {
         {
             plugin: SassLoaderPlugin,
             options: {
-                resources: "./src/style/variables.scss"
+                resources: [
+                    path.join(__dirname, "./src/style/variables.scss"),
+                    path.join(__dirname, "./src/global.scss")
+                ]
             }
         }
     ]

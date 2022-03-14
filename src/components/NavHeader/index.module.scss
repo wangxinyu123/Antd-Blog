@@ -1,4 +1,27 @@
 .header {
-  height: 60px;
-  // background-color:
+  height: 3.6rem;
+  background-color: $color-white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaecef;
+  padding: 0.7rem 1.5rem;
+  .leftNav {
+    a {
+      font-weight: 500;
+      text-decoration: none;
+      line-height: 2.2rem;
+      img {
+        height: 2.2rem;
+        min-width: 2.2rem;
+        margin-right: 0.8rem;
+        vertical-align: top;
+      }
+      span {
+        font-size: 1.3rem; 
+        font-weight: 600;
+        color: $color-font;
+      }
+    }
+  }
 }
