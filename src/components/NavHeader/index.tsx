@@ -23,9 +23,9 @@ const HeaderPages: React.FC = () => {
                     <input type='search' className={styles.searchInput} />
                 </div>
                 {
-                    tabArr?.map((item) => {
+                    tabArr?.map((item, index) => {
                         return (
-                            <div className={styles.navItem}>
+                            <div className={styles.navItem} key={index}>
                                 <a href={item?.path}>{item.name}</a>
                             </div>
                         )

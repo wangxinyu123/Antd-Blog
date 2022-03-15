@@ -6,6 +6,7 @@ const ProductPages: React.FC = () => {
     return (
         <div className={styles.pageContain}>
             <NavHeader />
+            ProductPages
         </div>
     )
 }
