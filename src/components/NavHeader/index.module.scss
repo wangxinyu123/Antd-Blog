@@ -18,9 +18,41 @@
         vertical-align: top;
       }
       span {
-        font-size: 1.3rem; 
+        font-size: 1.3rem;
         font-weight: 600;
         color: $color-font;
+      }
+    }
+  }
+  .rightNav {
+    display: flex;
+    align-items: center;
+    .search {
+      border: 1px solid #cfd4db;
+      border-radius: 2rem;
+      height: 2rem;
+      position: relative;
+      .searchIcon {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #b2bec3;
+        position: absolute;
+        top: 7px;
+        left: 7px;
+      }
+      .searchInput {
+        border: 1px solid #cfd4db;
+        border-radius: 2rem;
+        height: 2rem;
+        padding: 0 0.5rem 0 2rem;
+      }
+    }
+    .navItem {
+      margin-left: 1.2rem;
+      a {
+        text-decoration: none;
+        color: $color-font;
+        font-size: 1rem;
       }
     }
   }
