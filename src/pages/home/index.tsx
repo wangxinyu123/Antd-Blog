@@ -1,5 +1,5 @@
 import React from 'react';
-import NavHeader from '@/components/NavHeader'
+import { Link } from 'react-router-dom'
 import styles from './index.module.scss'
 
 const dataArr = [
@@ -10,14 +10,13 @@ const dataArr = [
 const HomePage: React.FC = () => {
     return (
         <div className={styles.homeContain}>
-            <NavHeader />
             <div className={styles.contain}>
                 <div className={styles.logo}>
-                    <img src='http://interview.poetries.top/logo.png' />
+                    <img src={require('@/image/blog_icon.png')} />
                 </div>
                 <h1 className={styles.title}>Wysoka 学习笔记</h1>
                 <div className={styles.quickBtn}>
-                    <a href='/product'>快速了解 →</a>
+                    <Link to='/product'>快速了解 →</Link>
                 </div>
                 <div className={styles.introduce}>
                     {
