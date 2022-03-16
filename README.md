@@ -9,4 +9,6 @@
 后端：[![](https://img.shields.io/badge/-egg-007396?style=flat-square&logo=node.js&logoColor=00b894)](https://www.eggjs.org/)
 [![](https://img.shields.io/badge/-mysql-007396?style=flat-square&logo=mysql&logoColor=2ecc71)](https://github.com/wangxinyu123/Antd-Blog)
 
-![image](https://github.com/wangxinyu123/Notebook/blob/main/Antd-Blog/img/%E5%8D%9A%E5%AE%A2%E9%A6%96%E9%A1%B5.png)
+两种主题模式<br/>
+<img src='https://github.com/wangxinyu123/Notebook/blob/main/Antd-Blog/img/%E6%B5%85%E8%89%B2%E6%A8%A1%E5%BC%8F.png' width="1000" height="550"/>
+<img src='https://github.com/wangxinyu123/Notebook/blob/main/Antd-Blog/img/%E6%B7%B1%E5%A4%9C%E6%A8%A1%E5%BC%8F.png' width="1000" height="550"/>
