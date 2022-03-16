@@ -10,7 +10,7 @@ interface IHeaderProps {
 }
 
 const tabArr = [
-    { path: '/', name: '✨基础知识' },
+    { path: '/product', name: '✨基础知识' },
     { path: '/material', name: '🔥物料库' },
     { path: '/dataCenter', name: '📡数据中心' }
 ]
