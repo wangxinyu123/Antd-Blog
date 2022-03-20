@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
         <div className={styles.homeContain}>
             <div className={styles.contain}>
                 <div className={styles.logo}>
-                    <img src={require('@/image/blog_icon.png')} />
+                    <img src={require('@/image/me.png')} />
                 </div>
                 <h1 className={styles.title}>Wysoka 学习笔记</h1>
                 <div className={styles.quickBtn}>

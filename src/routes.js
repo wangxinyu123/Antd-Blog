@@ -1,9 +1,7 @@
 import { Suspense, lazy, useState, useMemo } from 'react'
-import { Layout, Spin } from 'antd'
+import { Spin } from 'antd'
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom'
 import NavHeader from '@/components/NavHeader'
-
-const { Header, Content } = Layout
 
 const routes = [
     {
@@ -15,8 +13,22 @@ const routes = [
         component: lazy(() => import('@/pages/product'))
     },
     {
-        path: '/material',
-        component: lazy(() => import('@/pages/material'))
+        path: '/material/*',
+        component: lazy(() => import('@/pages/material')),
+        children: [
+            {
+                path: 'tableWithPagination',
+                component: lazy(() => import('@/components/TableWithPagination'))
+            },
+            {
+                path: 'notFound',
+                component: lazy(() => import('@/components/NotFound'))
+            },
+            {
+                path: 'statusStep',
+                component: lazy(() => import('@/components/StatusStep'))
+            },
+        ]
     },
     {
         path: '/dataCenter',
@@ -51,12 +63,12 @@ const AppWrapper = () => {
     }
     return (
         <Router>
-            <Header>
+            <header>
                 <NavHeader theme={theme} getTheme={getTheme} />
-            </Header>
-            <Content>
+            </header>
+            <div>
                 <Routes />
-            </Content>
+            </div>
         </Router>
     )
 }

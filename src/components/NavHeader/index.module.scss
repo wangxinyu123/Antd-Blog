@@ -59,3 +59,9 @@
     }
   }
 }
+:global {
+  .ant-layout-header {
+    padding: 0;
+    background-color: $color-white;
+  }
+}

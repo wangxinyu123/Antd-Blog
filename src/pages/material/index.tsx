@@ -1,10 +1,14 @@
 import React from 'react';
+import SideNav from '@/components/SideNav'
+import { materialConfig } from '@/constants/menuConfig'
 import styles from './index.module.scss'
 
-const MaterialItem: React.FC = () => {
+const MaterialItem: React.FC = (props) => {
+    console.log(props)
     return (
         <div className={styles.materialContain}>
-            MaterialItem物料库
+            <SideNav menu={materialConfig} defaultKeys={'1'} />
+            {props.children}
         </div>
     )
 }
