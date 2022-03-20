@@ -1,21 +1,32 @@
 import { lazy } from 'react'
+import Home from '@/pages/home'
+import Product from '@/pages/product'
+import Material from '@/pages/material'
+import DataCenter from '@/pages/dataCenter'
+import TableWithPagination from '@/components/TableWithPagination'
 
 const routes = [
     {
         path: '/',
-        component: lazy(() => import('@/pages/home'))
+        component: Home
     },
     {
         path: '/product',
-        component: lazy(() => import('@/pages/product/index'))
+        component: Product
     },
     {
         path: '/material',
-        component: lazy(() => import('@/pages/material/index')),
+        component: Material,
+        children: [
+            {
+                path: '/tableWithPagination',
+                component: TableWithPagination
+            }
+        ]
     },
     {
         path: '/dataCenter',
-        component: lazy(() => import('@/pages/dataCenter/index'))
+        component: DataCenter
     }
 ]
 
