@@ -7,7 +7,7 @@ const MaterialItem: React.FC = (props) => {
     console.log(props)
     return (
         <div className={styles.materialContain}>
-            <SideNav menu={materialConfig} defaultKeys={'1'} />
+            {/* <SideNav menu={materialConfig} defaultKeys={'1'} /> */}
             {props.children}
         </div>
     )

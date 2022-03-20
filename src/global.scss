@@ -3,4 +3,9 @@ html {
   margin: 0;
   padding: 0;
   border: 0;
-} 
+}
+:global {
+  .ant-layout {
+    background-color: $color-white;
+  }
+}

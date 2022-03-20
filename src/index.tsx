@@ -1,8 +1,11 @@
+import { BrowserRouter as Router } from 'react-router-dom'
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css'
-import App from './routes'
+import App from './App'
 
 ReactDOM.render(
-  <App />,
+  <Router>
+    <App />
+  </Router>,
   document.getElementById('root')
 );
