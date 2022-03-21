@@ -19,3 +19,31 @@ export const materialConfig = [
         icon: FastForwardOutlined
     }
 ]
+export const productConfig = [
+    {
+        name: 'css',
+        path: '/product/css',
+        key: 'css',
+        icon: TableOutlined
+    },
+    {
+        name: "ts/js",
+        path: '/product/ts',
+        key: 'ts',
+        icon: BugOutlined
+    },
+]
+export const dataCenterConfig = [
+    {
+        name: "饼图",
+        path: '/dataCenter/pie',
+        key: 'pie',
+        icon: BugOutlined
+    },
+    {
+        name: "折线图",
+        path: '/dataCenter/line',
+        key: 'line',
+        icon: TableOutlined
+    }
+]

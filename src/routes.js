@@ -4,6 +4,8 @@ import Product from '@/pages/product'
 import Material from '@/pages/material'
 import DataCenter from '@/pages/dataCenter'
 import TableWithPagination from '@/components/TableWithPagination'
+import NotFound from '@/components/NotFound'
+import StatusStep from '@/components/StatusStep'
 
 const routes = [
     {
@@ -17,12 +19,18 @@ const routes = [
     {
         path: '/material',
         component: Material,
-        children: [
-            {
-                path: '/tableWithPagination',
-                component: TableWithPagination
-            }
-        ]
+    },
+    {
+        path: '/material/tableWithPagination',
+        component: TableWithPagination
+    },
+    {
+        path: '/material/notFound',
+        component: NotFound
+    },
+    {
+        path: '/material/statusStep',
+        component: StatusStep
     },
     {
         path: '/dataCenter',
