@@ -1,5 +1,5 @@
 .menuItem {
-  height: 100%;
+  height: calc(100vh - 60px);
   :global{
     .ant-menu-inline{
         height: 100%;

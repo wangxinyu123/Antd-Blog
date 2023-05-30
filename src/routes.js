@@ -1,14 +1,12 @@
-import { lazy } from 'react'
 import Home from '@/pages/home'
-import Product from '@/pages/product'
 import cssPage from './pages/product/CSS'
 import TsPage from './pages/product/Typescript'
 import ReactPage from './pages/product/React'
-import Material from '@/pages/material'
-import DataCenter from '@/pages/dataCenter'
 import TableWithPagination from '@/components/TableWithPagination'
 import NotFound from '@/components/NotFound'
 import StatusStep from '@/components/StatusStep'
+import PiePage from './pages/dataCenter/pie'
+import LinePage from './pages/dataCenter/line'
 
 const routes = [
     {
@@ -17,7 +15,7 @@ const routes = [
     },
     {
         path: '/product',
-        component: Product
+        component: cssPage
     },
     {
         path: '/product/css',
@@ -33,7 +31,7 @@ const routes = [
     },
     {
         path: '/material',
-        component: Material,
+        component: TableWithPagination,
     },
     {
         path: '/material/tableWithPagination',
@@ -49,7 +47,15 @@ const routes = [
     },
     {
         path: '/dataCenter',
-        component: DataCenter
+        component: PiePage
+    },
+    {
+        path: '/dataCenter/pie',
+        component: PiePage
+    },
+    {
+        path: '/dataCenter/line',
+        component: LinePage
     }
 ]
 

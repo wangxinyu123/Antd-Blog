@@ -19,6 +19,8 @@ const App = () => {
         if (location.pathname === '/') {
             setSideStatus(false)
         } else {
+            const currentPath = location.pathname.split('/')[1]
+            handleMenu(`/${currentPath}`)
             setSideStatus(true)
         }
     }, [location])
