@@ -5,7 +5,7 @@ import styles from './index.module.scss'
 const ProductPages: React.FC = () => {
     return (
         <div className={styles.pageContain}>
-            ProductPages
+            欢迎👏🏻来到基础知识
         </div>
     )
 }

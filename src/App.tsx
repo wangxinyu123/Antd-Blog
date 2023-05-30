@@ -1,7 +1,8 @@
-import React, { useState, useMemo, useEffect } from 'react'
+import React, { useState, useMemo, useEffect, useRef } from 'react'
 import { Route, useLocation, Switch, Redirect } from 'react-router-dom'
 import { Layout } from 'antd'
 import routes from './routes'
+import { IMenuConfig } from './interface/NavMenu'
 import NavHeader from '@/components/NavHeader'
 import SideNav from '@/components/SideNav'
 import { materialConfig, productConfig, dataCenterConfig } from '@/constants/menuConfig'
@@ -12,9 +13,6 @@ const App = () => {
     const [status, setStatus] = useState('light');
     const [menuList, setMenuList] = useState<any>([])
     const [sideStatus, setSideStatus] = useState(true)
-    const materialMenu = materialConfig.map((item) => item.path)
-    const productMenu = productConfig.map((item) => item.path)
-    const dataCenterMenu = dataCenterConfig.map((item) => item.path)
     const location = useLocation()
 
     useEffect(() => {
@@ -25,15 +23,19 @@ const App = () => {
         }
     }, [location])
 
-    useEffect(() => {
-        if (materialMenu.concat(["/material"]).includes(location.pathname)) {
-            setMenuList(materialConfig)
-        } else if (productMenu.concat(["/product"]).includes(location.pathname)) {
-            setMenuList(productConfig)
-        } else if (dataCenterMenu.concat(['/dataCenter']).includes(location.pathname)) {
-            setMenuList(dataCenterConfig)
+    const handleMenu = (path: string) => {
+        switch (path) {
+            case '/product':
+                setMenuList(productConfig)
+                break;
+            case '/material':
+                setMenuList(materialConfig)
+                break;
+            case '/dataCenter':
+                setMenuList(dataCenterConfig)
+                break;
         }
-    }, [location])
+    }
 
     const theme = useMemo(() => {
         return localStorage.getItem('dark_theme')
@@ -46,15 +48,13 @@ const App = () => {
     return (
         <Layout>
             <Header>
-                <NavHeader theme={theme!} getTheme={getTheme} />
+                <NavHeader theme={theme!} getTheme={getTheme} changMenu={(value: string) => handleMenu(value)} />
             </Header>
             <Layout>
                 {
-                    sideStatus ? (
-                        <Sider>
-                            <SideNav menu={menuList} />
-                        </Sider>
-                    ) : null
+                    sideStatus && <Sider>
+                        <SideNav menu={menuList} />
+                    </Sider>
                 }
                 <Content>
                     <Switch>

@@ -1,5 +1,8 @@
 .pageContain {
   // background-color: ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: $color-blue;
   height: calc(100vh - 59px);
 }

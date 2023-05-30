@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Menu } from 'antd'
-import { IMenuProps } from '@/interface/NavMenu'
+import { IMenuConfig } from '@/interface/NavMenu'
 import styles from './index.module.scss'
 
 
 const MenuItem = Menu.Item
-const NavMenu: React.FC<IMenuProps> = ({ menu, defaultKeys }) => {
+const NavMenu: React.FC<IMenuConfig> = ({ menu, defaultKeys }) => {
     return (
         <div className={styles.menuItem}>
             <Menu mode='inline' theme='light' defaultSelectedKeys={defaultKeys}>

@@ -1,4 +1,4 @@
-export interface IMenuProps {
+export interface IMenuConfig{
     defaultKeys?: any;
     selectedKeys?: string;
     menu: {

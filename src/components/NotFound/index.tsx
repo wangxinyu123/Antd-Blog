@@ -1,9 +1,12 @@
 import React from 'react'
+import { Empty } from 'antd'
 import styles from './index.module.scss'
 
 const NotFound = () => {
     return (
-        <div>NotFound</div>
+        <Empty
+            description="404 Not Found"
+        />
     )
 }
 

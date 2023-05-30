@@ -7,6 +7,7 @@ import styles from './index.module.scss'
 interface IHeaderProps {
     theme: string;
     getTheme: (val: boolean) => void
+    changMenu: (val: string) => void
 }
 
 const tabArr = [
@@ -15,7 +16,7 @@ const tabArr = [
     { path: '/dataCenter', name: '📡数据中心' }
 ]
 
-const HeaderPages: React.FC<IHeaderProps> = ({ theme, getTheme }) => {
+const HeaderPages: React.FC<IHeaderProps> = ({ theme, getTheme, changMenu }) => {
     const themeRef = useRef(theme);
 
     return (
@@ -38,7 +39,7 @@ const HeaderPages: React.FC<IHeaderProps> = ({ theme, getTheme }) => {
                 {
                     tabArr?.map((item, index) => {
                         return (
-                            <div className={styles.navItem} key={index}>
+                            <div className={styles.navItem} key={index} onClick={() => changMenu(item.path)}>
                                 <Link to={item?.path}>{item.name}</Link>
                             </div>
                         )
